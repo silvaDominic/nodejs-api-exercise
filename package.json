@@ -1,0 +1,20 @@
+{
+  "name": "http-server-intermediate-hackerrank",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "pretest": "npm install",
+    "test": "cross-env PORT=8001 ./node_modules/.bin/mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --exit"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.0",
+    "mocha-multi-reporters": "^1.5.1"
+  }
+}
