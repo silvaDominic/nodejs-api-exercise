@@ -1,4 +1,4 @@
-module.exports = [
+const projects = [
     {
         id : 1,
         name : 'Multitasking Demo'
@@ -16,3 +16,5 @@ module.exports = [
         name : 'Alicia In Wonderland'
     }
 ];
+
+export default projects;

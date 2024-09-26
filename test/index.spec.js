@@ -1,6 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const server = require('../index');
+const server = require('../server.js');
 const projects = Array.from(require('../data-store'));
 const Promise = require('bluebird');
 const should = chai.should();

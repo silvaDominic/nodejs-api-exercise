@@ -32,7 +32,7 @@ The Server accepts requests only for GET /projects and POST /projects endpoints.
 Note: A file, data-store.js, with an array of projects are present in the root of the project. Import the data from this file, as shown below:
 
 ```
-// index.js
+// server.js
 `var projects = require('./data-store');`
 
 // For POST request, add the new item to the projects array.

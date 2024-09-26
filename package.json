@@ -2,9 +2,10 @@
   "name": "http-server-intermediate-hackerrank",
   "version": "1.0.0",
   "private": true,
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "pretest": "npm install",
     "test": "cross-env PORT=8001 ./node_modules/.bin/mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --exit"
   },
