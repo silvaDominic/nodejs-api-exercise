@@ -4,7 +4,7 @@ import projects from './data-store.js';
 const hostname = '127.0.0.1';
 const port = 8000;
 
-const inMemoryProjects = [...projects];
+const inMemoryProjectsStore = [...projects];
 let server = http.createServer((req, res) => {
   res.setHeader('content-type', 'application/json');
 
@@ -12,7 +12,7 @@ let server = http.createServer((req, res) => {
     switch(req.method) {
       case "GET":
         res.statusCode = 200;
-        res.end(JSON.stringify(inMemoryProjects));
+        res.end(JSON.stringify(inMemoryProjectsStore));
         break;
       case "POST":
         let body = '';
@@ -32,16 +32,16 @@ let server = http.createServer((req, res) => {
           const postData = JSON.parse(body);
 
           // If duplicate
-          if (inMemoryProjects.find((proj) => proj.id === postData.id)) {
+          if (inMemoryProjectsStore.find((proj) => proj.id === postData.id)) {
             res.statusCode = 400;
             res.end(JSON.stringify({message: "BAD REQUEST"}));
             return;
           }
 
           // Add project
-          inMemoryProjects.push(postData);
+          inMemoryProjectsStore.push(postData);
           res.statusCode = 201;
-          res.end(JSON.stringify(inMemoryProjects));
+          res.end(JSON.stringify(inMemoryProjectsStore));
         });
         break;
     }
