@@ -47,9 +47,4 @@ dist
 .idea
 !/.github/
 !/.github/**
-!/.github/
-!/.github/**
-!/.github/
-!/.github/**
-!/.github/
-!/.github/**
+PROJECT_FILES_INSTRUCTIONS.md
