@@ -15,9 +15,6 @@ let server = http.createServer((req, res) => {
         res.end(JSON.stringify(inMemoryProjects));
         break;
     }
-  } else if (req.url === '/') {
-    res.statusCode = 200;
-    res.end(JSON.stringify({message: "Create or fetch some projects!"}));
   } else {
     res.statusCode = 404;
     res.end(JSON.stringify({message: "NOT FOUND"}));
