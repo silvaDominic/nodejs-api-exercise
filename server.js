@@ -4,8 +4,8 @@ import projects from './data-store.js';
 const hostname = '127.0.0.1';
 const port = 8000;
 
+const inMemoryProjects = [...projects];
 let server = http.createServer((req, res) => {
-  const inMemoryProjects = [...projects];
   res.setHeader('content-type', 'application/json');
 
   if (req.url === '/projects') {
